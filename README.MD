@@ -4,8 +4,8 @@
 1) cd backend 
 2) edit env.sample
 4) npm run dev
-5) curl -i http://localhost:3001/api/v1/health
-6) curl -i http://localhost:3001/api/openapi  
+5) curl -i http://localhost:3000/api/v1/health
+6) curl -i http://localhost:3000/api/openapi  
 
 # Start Mobile
 1) cd mobile

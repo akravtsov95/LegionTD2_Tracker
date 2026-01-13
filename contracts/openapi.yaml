@@ -5,7 +5,7 @@ info:
   title: Proxy service Legion TD 2
 
 paths:
-  /v1/heath:
+  /v1/health:
     get:
       responses:
         "200":
