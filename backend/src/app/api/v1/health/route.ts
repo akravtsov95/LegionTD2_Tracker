@@ -1,5 +1,3 @@
-import { env } from "@/server/env"
-
 export async function GET() {
     return Response.json(
         { status: "OK"},
