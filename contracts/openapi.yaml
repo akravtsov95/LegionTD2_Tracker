@@ -1,0 +1,30 @@
+openapi: 3.0.1
+
+info:
+  version: 0.0.1
+  title: Proxy service Legion TD 2
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /api/v1/health:
+    get:
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: OK }
+components:
+  schemas:
+    ApiError:
+      type: object
+      required: [code, message, traceId]
+      properties:
+        traceId: { type: string, example: "req_abc123"}
+        code: { type: string, example: INTERNAL }
+        message: { type: string, example: Something wrong}
