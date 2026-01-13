@@ -5,7 +5,7 @@ info:
   title: Proxy service Legion TD 2
 
 servers:
-  - url: http:localhost:3000
+  - url: http://localhost:3000
 
 paths:
   /api/v1/health:
@@ -23,7 +23,8 @@ components:
   schemas:
     ApiError:
       type: object
-      required: [code, message]
+      required: [code, message, traceId]
       properties:
+        traceId: { type: string, example: "req_abc123"}
         code: { type: string, example: INTERNAL }
         message: { type: string, example: Something wrong}
