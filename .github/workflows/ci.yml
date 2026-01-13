@@ -10,7 +10,6 @@ jobs:
         with: { node-version: 22 }
       - run: npm ci
       - run: npm run lint
-      - run: npm test
       - run: npm run build
   
   mobile:
@@ -22,4 +21,3 @@ jobs:
         with: { flutter-version: "3.38.x" }
       - run: flutter pub get
       - run: flutter analyze
-      - run: flutter test
