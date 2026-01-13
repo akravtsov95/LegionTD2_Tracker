@@ -1,0 +1,26 @@
+openapi: 3.0.1
+
+info:
+  version: 0.0.1
+  title: Proxy service Legion TD 2
+
+paths:
+  /v1/heath:
+    get:
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: OK }
+components:
+  schemas:
+    ApiError:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string, example: INTERNAL }
+        message: { type: string, example: Something wrong}
